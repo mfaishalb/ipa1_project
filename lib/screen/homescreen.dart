@@ -13,27 +13,31 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor:  Colors.white,
+      backgroundColor: Colors.white,
       appBar: CustomAppBar2(),
       body: CustomScrollView(
         physics: const ClampingScrollPhysics(),
-        slivers: <Widget> [
+        slivers: <Widget>[
           _buildHeader(screenHeight),
         ],
       ),
-      bottomNavigationBar: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 30, 350, 0),
-                child: IconButton(
-                    color: Colors.white,
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const BottomNavScreen()));
-                    },
-                    icon: const Icon(Icons.arrow_back))),
+      // =============================
+      // Ini gak usah dipake
+      // =============================
+      // bottomNavigationBar: Padding(
+      //     padding: const EdgeInsets.fromLTRB(0, 30, 350, 0),
+      //     child: IconButton(
+      //         color: Colors.black,
+      //         onPressed: () {
+      //           Navigator.push(
+      //               context,
+      //               MaterialPageRoute(
+      //                   builder: (context) => const BottomNavScreen()));
+      //         },
+      //         icon: const Icon(Icons.arrow_back))),
     );
   }
+
   SliverToBoxAdapter _buildHeader(double screenHeight) {
     return SliverToBoxAdapter(
       child: Container(
@@ -56,7 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28.0,
-                    
                     fontFamily: 'Rosmatika',
                   ),
                 ),
@@ -93,5 +96,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
 }

@@ -20,11 +20,12 @@ void main() {
       home: const MyApp(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          scaffoldBackgroundColor: const Color.fromRGBO(51,52,60, 1),
+          scaffoldBackgroundColor: const Color.fromRGBO(51, 52, 60, 1),
           visualDensity: VisualDensity.adaptivePlatformDensity),
     ),
   ));
 }
+
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
@@ -47,7 +48,6 @@ class _MyAppState extends State<MyApp> {
                 MyImageView('assets/images/3.png'),
                 MyImageView('assets/images/22.png'),
                 MyImageView('assets/images/21.png'),
-
               ],
               options: CarouselOptions(
                 height: 285.0,
@@ -61,7 +61,9 @@ class _MyAppState extends State<MyApp> {
               padding: EdgeInsets.only(left: 10, right: 70, top: 90, bottom: 0),
               child: Text("Welcome to Foodeology!",
                   style: TextStyle(
-                      fontFamily: 'Rosmatika', fontSize: 24, color: Colors.white))),
+                      fontFamily: 'Rosmatika',
+                      fontSize: 24,
+                      color: Colors.white))),
           const Padding(
               padding: EdgeInsets.only(left: 25, right: 40, top: 10, bottom: 0),
               child: Text(
@@ -76,30 +78,30 @@ class _MyAppState extends State<MyApp> {
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
-                        const Color.fromRGBO(190,156,117, 1)),
+                        const Color.fromRGBO(190, 156, 117, 1)),
                     textStyle: MaterialStateProperty.all(
                         const TextStyle(fontSize: 20)),
                     fixedSize: MaterialStateProperty.all(const Size(320, 55)),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
-                            side: const BorderSide(color: Colors.white))
-                            )
-                            ),
+                            side: const BorderSide(color: Colors.white)))),
                 child: const Text(
                   'Login',
                   style: TextStyle(
-                      fontFamily: 'Rosmatika', fontSize: 24, color: Colors.white),
+                      fontFamily: 'Rosmatika',
+                      fontSize: 24,
+                      color: Colors.white),
                 ),
-                onPressed: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => daftar())),
+                onPressed: () => Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => daftar())),
               )),
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
             child: ElevatedButton(
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromRGBO(190,156,117, 1)),
+                      const Color.fromRGBO(190, 156, 117, 1)),
                   textStyle:
                       MaterialStateProperty.all(const TextStyle(fontSize: 24)),
                   fixedSize: MaterialStateProperty.all(const Size(320, 55)),
@@ -114,8 +116,8 @@ class _MyAppState extends State<MyApp> {
                   fontSize: 24,
                 ),
               ),
-              onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) =>  Login())),
+              onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Login())),
             ),
           ),
         ],
